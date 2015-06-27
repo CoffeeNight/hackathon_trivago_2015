@@ -59,7 +59,8 @@ gulp.task('patternlab:sass',['sass'], shell.task([
 /**
  * Generate JS and run patternlab
  */
-gulp.task('patternlab:js',['js', 'js:prototype'], shell.task([
+//gulp.task('patternlab:js',['js', 'js:prototype'], shell.task([
+gulp.task('patternlab:js',['js'], shell.task([
   'php core/console --generate'
 ]));
 
@@ -81,11 +82,6 @@ gulp.task('cp:flash', function () {
 		.pipe(gulp.dest('./source/assets/swf/'));
 });
 
-gulp.task('cp:html5animation', function () {
-  return gulp
-    .src('./assets/html5animations/**/*')
-    .pipe(gulp.dest('./source/assets/html5animations/'));
-});
 
 
 /**
@@ -112,13 +108,13 @@ gulp.task('nodeunit', function(){
 
 gulp.task('sass:vendors', function() {
   return gulp.src([
-      './assets/css/vendors/bootstrap/bootstrap.css',
-      './bower_components/bootstrap-touch-carousel/dist/css/bootstrap-touch-carousel.css',
-      './bower_components/fontawesome/css/font-awesome.css',
-      './bower_components/animate.css/animate.css',
-      './bower_components/owlcarousel/dist/assets/owl.carousel.css',
-      './bower_components/nouislider/src/jquery.nouislider.css',
-      './bower_components/nouislider/src/jquery.nouislider.pips.css'
+      './assets/css/vendors/bootstrap/bootstrap.css'
+      // './bower_components/bootstrap-touch-carousel/dist/css/bootstrap-touch-carousel.css',
+      // './bower_components/fontawesome/css/font-awesome.css',
+      // './bower_components/animate.css/animate.css',
+      // './bower_components/owlcarousel/dist/assets/owl.carousel.css',
+      // './bower_components/nouislider/src/jquery.nouislider.css',
+      // './bower_components/nouislider/src/jquery.nouislider.pips.css'
     ])
     .pipe(plugins.rename({ prefix: '_', extname: '.scss' }))
     .pipe(gulp.dest('./assets/css/vendors'));
@@ -161,7 +157,7 @@ gulp.task('w:sass', function(){
 gulp.task('w:js', function(){
   return plugins.watch([
     './assets/js/inits/*.js',
-    './assets/js/prototype/*.js'
+    // './assets/js/prototype/*.js'
   ], function(files){
     // Patternlab: pl:sass instead os sass
     // return gulp.start('sass');
@@ -186,19 +182,19 @@ gulp.task('js', function () {
       'bower_components/modernizr/modernizr.js',
       'bower_components/parsley.js/dist/parsley.js',
       'bower_components/picturefill/dist/picturefill.js',
-      'bower_components/html5shiv/dist/html5shiv.js',
+      //'bower_components/html5shiv/dist/html5shiv.js',
       'bower_components/respond/dest/respond.min.js',
       'bower_components/selectivizr/selectivizr.js',
-      'bower_components/webfontloader/index.js',
-      'bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
-      'bower_components/bootstrap/js/carousel.js',
-      'bower_components/bootstrap/js/tab.js',
-      'bower_components/bootstrap/js/tooltip.js',
-      'bower_components/bootstrap-touch-carousel/dist/js/bootstrap-touch-carousel.js',
-      'bower_components/bootstrap/js/collapse.js',
-      'bower_components/owlcarousel/dist/owl.carousel.js',
-      'bower_components/bootstrap-tabcollapse/bootstrap-tabcollapse.js',
-      'bower_components/swfobject/swfobject/swfobject.js',
+      //'bower_components/webfontloader/index.js',
+      //'bower_components/noty/js/noty/packaged/jquery.noty.packaged.js',
+      //'bower_components/bootstrap/js/carousel.js',
+      //'bower_components/bootstrap/js/tab.js',
+      //'bower_components/bootstrap/js/tooltip.js',
+      //'bower_components/bootstrap-touch-carousel/dist/js/bootstrap-touch-carousel.js',
+      //'bower_components/bootstrap/js/collapse.js',
+      //'bower_components/owlcarousel/dist/owl.carousel.js',
+      //'bower_components/bootstrap-tabcollapse/bootstrap-tabcollapse.js',
+      //'bower_components/swfobject/swfobject/swfobject.js',
       'bower_components/nouislider/distribute/jquery.nouislider.all.js',
       './assets/js/inits/*.js'
     ])
@@ -214,18 +210,20 @@ gulp.task('js', function () {
     .pipe(gulp.dest('./source/assets/js'));
 });
 
-gulp.task('js:prototype', function () {
-	return gulp.src([ './assets/js/prototype/*.js' ])
-    .pipe(plugins.concat('prototype.js'))
-    .pipe(plugins.size())
-    .pipe(gulp.dest('./source/assets/js/'))
-  ;
-});
+//gulp.task('js:prototype', function () {
+//	return gulp.src([ './assets/js/prototype/*.js' ])
+//    .pipe(plugins.concat('prototype.js'))
+//    .pipe(plugins.size())
+//    .pipe(gulp.dest('./source/assets/js/'))
+//  ;
+//});
 
 gulp.task('default', ['lab', 'watch', 'connect']);
 
 gulp.task('watch', ['w:sass', 'w:patterns', "w:js"]);
-gulp.task('assets', ['cp:font', 'cp:flash', 'cp:html5animation', 'sass', 'js', 'js:prototype', 'favicons']);
+//gulp.task('assets', ['cp:font', 'cp:flash', 'cp:html5animation', 'sass', 'js', 'js:prototype', 'favicons']);
+// gulp.task('assets', ['sass', 'js', 'js:prototype']);
+gulp.task('assets', ['sass', 'js']);
 // Patternlab-php: disabled patternlab-node tasks
 // gulp.task('prelab', ['banner', 'assets']);
 gulp.task('patternlab:pre', ['assets']);
@@ -239,7 +237,8 @@ gulp.task('travis', ['lab', 'nodeunit']);
 gulp.task('version', ['patternlab:version']);
 gulp.task('help', ['patternlab:help']);
 
-gulp.task('images', ['images:resample', 'images:thumbnails', 'svg', 'cp:images']);
+//gulp.task('images', ['images:resample', 'images:thumbnails', 'svg', 'cp:images']);
+gulp.task('images', ['svg', 'cp:images']);
 gulp.task('svg', ['svg:min', 'svg:png']);
 
 gulp.task('cp:images', function () {
