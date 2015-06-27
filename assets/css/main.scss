@@ -66,3 +66,25 @@
 
 // @import "print";
 
+ .wm-big-header {
+  position: relative;
+  padding: 60px 0;
+  color: #cdbfe3;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  background-color: #6f5499;
+  background-image: url("../../images/back1.jpg");
+  background-repeat: repeat-x;
+}
+
+.input-large {
+  width: 150px;
+}
+
+.wm-search-wrapper {
+  padding: 189px 0 125px 0px;
+}
+
+.footer {
+  background-color: #222;
+}
