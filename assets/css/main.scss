@@ -93,3 +93,36 @@
 .footer {
   background-color: #222;
 }
+
+.searchbox {
+  margin: 5px 0;
+  overflow: hidden; 
+}
+.searchbox .searchbox-short-description {
+  font-weight: bold;
+  font-size: 16px;
+}
+.searchbox .searchbox-name {
+  color: #8b8b8b;
+  font-size: 13px;
+}
+.searchbox .searchbox-interests {
+  padding: 5px 0 0 0;
+}
+.searchbox .rating {
+  width: 20px;
+  height: 20px;
+}
+.searchbox .interest {
+  background-color: rgb(30, 82, 143);
+  width: 40px;
+}
+.searchbox .searchbox-interests ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.searchbox .searchbox-interests ul li {
+  display: inline-block;
+  margin-right: 5px;
+}
