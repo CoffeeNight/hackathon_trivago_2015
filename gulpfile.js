@@ -108,13 +108,14 @@ gulp.task('nodeunit', function(){
 
 gulp.task('sass:vendors', function() {
   return gulp.src([
-      './assets/css/vendors/bootstrap/bootstrap.css'
+      './assets/css/vendors/bootstrap/bootstrap.css',
       // './bower_components/bootstrap-touch-carousel/dist/css/bootstrap-touch-carousel.css',
       // './bower_components/fontawesome/css/font-awesome.css',
       // './bower_components/animate.css/animate.css',
       // './bower_components/owlcarousel/dist/assets/owl.carousel.css',
       // './bower_components/nouislider/src/jquery.nouislider.css',
       // './bower_components/nouislider/src/jquery.nouislider.pips.css'
+      './bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css'
     ])
     .pipe(plugins.rename({ prefix: '_', extname: '.scss' }))
     .pipe(gulp.dest('./assets/css/vendors'));
@@ -196,6 +197,8 @@ gulp.task('js', function () {
       //'bower_components/bootstrap-tabcollapse/bootstrap-tabcollapse.js',
       //'bower_components/swfobject/swfobject/swfobject.js',
       'bower_components/nouislider/distribute/jquery.nouislider.all.js',
+      'bower_components/moment/moment.js',
+      'bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js',
       './assets/js/inits/*.js'
     ])
     .pipe(plugins.concat('main.js'))
@@ -223,7 +226,7 @@ gulp.task('default', ['lab', 'watch', 'connect']);
 gulp.task('watch', ['w:sass', 'w:patterns', "w:js"]);
 //gulp.task('assets', ['cp:font', 'cp:flash', 'cp:html5animation', 'sass', 'js', 'js:prototype', 'favicons']);
 // gulp.task('assets', ['sass', 'js', 'js:prototype']);
-gulp.task('assets', ['sass', 'js']);
+gulp.task('assets', ['cp:font', 'sass', 'js']);
 // Patternlab-php: disabled patternlab-node tasks
 // gulp.task('prelab', ['banner', 'assets']);
 gulp.task('patternlab:pre', ['assets']);
