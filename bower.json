@@ -29,7 +29,9 @@
     "bootstrap-touch-carousel": "~0.8.0",
     "nouislider": "https://github.com/leongersen/noUiSlider.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "eonasdan-bootstrap-datetimepicker": "~4.14.30"
+  },
   "ignore": [
     "node_modules",
     "bower_components",

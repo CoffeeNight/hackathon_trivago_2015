@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html class="{{ htmlClass }}">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js {{ htmlClass }}"> <!--<![endif]-->
 	<head>
 		<title>{{ title }}</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width" />
 		
 		<link rel="stylesheet" href="../../css/style.css?{{ cacheBuster }}" media="all" />
-		
-		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-		{{ patternLabHead | raw }}
-		<!-- End Pattern Lab -->
-		
-	</head>
-	<body class="{{ bodyClass }}">
-	
+
+        {{ patternLabHead | raw }}
+        <!--
+            Remember that patterns are displayed from two-levels deep (e.g. patterns/patterntype-patternsubtype-patternname/patterntype-patternsubtype-patternname.html)
+            Therefore all calls to assets should have the ../../ in order to work in an apache-less environment
+        -->
+        <style>
+            .has-comment, .has-comment a {
+                cursor: help !important;
+            }
+        </style>
+        <!-- END: DO NOT INCLUDE IN PRODUCTION -->
+
+        <link rel="stylesheet" href="../../assets/css/main.min.css" media="all" />
+        <script type="text/javascript" src="../../assets/js/main.min.js"></script>
+
+</head>
+<body class="{{ bodyClass }}"> <!-- Remove class:sg-single-pattern -->
