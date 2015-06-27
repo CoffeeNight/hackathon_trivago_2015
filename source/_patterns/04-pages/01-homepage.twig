@@ -5,20 +5,7 @@
       <div class="col-md-8 col-md-offset-2"><div class="logo__container"><img class="logo--home" src="../../assets/images/logo.png" alt=""></div></div>
     </div>
     <div class="row">
-      <div class="col-md-offset-2 col-md-3">
-        <input type="email" class="form-control input-lg" placeholder="Search destination" />
-      </div>
-      <div class="col-md-3">
-        <div class='input-group date' id='datetimepicker1'>
-          <input type='text' class="form-control input-lg" />
-          <span class="input-group-addon">
-              <span class="glyphicon glyphicon-calendar"></span>
-          </span>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <button type="submit" class="home-seach-submit btn btn-default btn-lg">Search</button>
-      </div>
+      {% include "molecules-searchbox" %}
     </div>
   </div>
 </main>
