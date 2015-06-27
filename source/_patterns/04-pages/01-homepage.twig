@@ -1,6 +1,28 @@
 {% include "molecules-header" %}
-
-<h1>Test</h1>
-<p>Testing…</p>
-
+<main class="wm-big-header">
+  <div class="container wm-search-wrapper">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-5">
+        <input type="email" class="form-control input-lg" placeholder="Search destination" />
+      </div>
+      <div class="col-md-2">
+        <div class='input-group date' id='datetimepicker1'>
+          <input type='text' class="form-control input-lg" />
+          <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <button type="submit" class="btn btn-default btn-lg">Search</button>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+$(function () {
+    var a =$('#datetimepicker1');
+    $('#datetimepicker1').datetimepicker();
+});
+</script>
 {% include "molecules-footer" %}
