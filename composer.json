@@ -1,0 +1,78 @@
+{
+	"name":             "pattern-lab/edition-twig-standard",
+	"description":      "Standard Edition of Pattern Lab for Twig. Installs all Twig-related assets except for a StarterKit.",
+	"keywords":         ["pattern lab"],
+	"homepage":         "http://patternlab.io",
+	"license":          "MIT",
+	"type":             "project",
+	"authors": [
+		{
+			"name":         "Dave Olsen",
+			"email":        "dmolsen@gmail.com",
+			"homepage":     "http://dmolsen.com",
+			"role":         "Lead Developer"
+		}
+	],
+	"support": {
+		"issues":         "https://github.com/pattern-lab/patternlab-php/issues",
+		"wiki":           "http://patternlab.io/docs/",
+		"source":         "https://github.com/pattern-lab/patternlab-php/releases"
+	},
+	"autoload": {
+		"psr-0": {
+			"PatternLab":   "core/src/"
+		}
+	},
+	"repositories": [
+	    {
+	        "type": "vcs",
+	        "url": "https://github.com/jgerhold/styleguidekit-assets-default"
+	    },
+	    {
+	        "type": "vcs",
+	        "url": "https://github.com/jgerhold/patternlab-php-core"
+	    },
+	    {
+	        "type": "vcs",
+	        "url": "https://github.com/jgerhold/patternengine-php-twig"
+	    },
+	    {
+	        "type": "vcs",
+	        "url": "https://github.com/jgerhold/styleguidekit-twig-default"
+	    }
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require": {
+		"php": ">=5.3.6",
+		"pattern-lab/core": "dev-ft-bugfix as 0.6.11",
+		"pattern-lab/patternengine-twig": "dev-ft-bugfix as 0.6.8",
+		"pattern-lab/styleguidekit-twig-default": "dev-ft-projectfixes as 0.6.6",
+		"pattern-lab/styleguidekit-assets-default": "dev-ft-projectfixes as 0.6.6"
+	},
+	"scripts": {
+		"post-create-project-cmd": [
+			"PatternLab\\Installer::postCreateProjectCmd"
+		],
+		"post-package-install": [
+			"PatternLab\\Installer::postPackageInstall"
+		],
+		"post-package-update": [
+			"PatternLab\\Installer::postPackageUpdate"
+		],
+		"pre-install-cmd": [
+			"PatternLab\\Installer::preInstallCmd"
+		],
+		"pre-package-uninstall": [
+			"PatternLab\\Installer::prePackageUninstall"
+		]
+	},
+	"extra": {
+		"patternlab": {
+			"starterKitSuggestions": [
+				"pattern-lab/starterkit-twig-base",
+				"pattern-lab/starterkit-twig-demo"
+			]
+		}
+	}
+}

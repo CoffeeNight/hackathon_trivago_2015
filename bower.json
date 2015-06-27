@@ -1,0 +1,41 @@
+{
+  "name": "ifm-html-prototype",
+  "version": "0.8.2",
+  "private": true,
+  "authors": [
+    "Stefan Nitzsche <nitzsche@orfgen.net>"
+  ],
+  "devDependencies": {
+    "parsley.js": "https://github.com/guillaumepotier/Parsley.js.git#^2.0.5",
+    "normalize.scss": "https://github.com/appleboy/normalize.scss.git#3.0.2",
+    "picturefill": "https://github.com/scottjehl/picturefill.git#2.2.0",
+    "jquery": "https://github.com/components/jquery.git#1.11.1",
+    "modernizr": "https://github.com/Modernizr/Modernizr.git#2.8.3",
+    "html5boilerplate": "https://github.com/h5bp/html5-boilerplate.git#4.3.0",
+    "conditionizr": "https://github.com/conditionizr/conditionizr.git#4.5.0",
+    "webfontloader": "http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js",
+    "bootstrap": "https://github.com/twbs/bootstrap.git#3.3.1",
+    "fontawesome": "https://github.com/FortAwesome/Font-Awesome.git#4.3.0",
+    "placeholder": "https://github.com/ginader/HTML5-placeholder-polyfill.git#2.0.10",
+    "respond.js": "https://github.com/scottjehl/Respond.git#1.4.2",
+    "noty": "https://github.com/needim/noty.git#2.3.4",
+    "animate.css": "https://github.com/daneden/animate.css.git#3.2.0",
+    "owlcarousel": "https://github.com/OwlFonk/OwlCarousel2.git",
+    "bootstrap-tabcollapse": "~0.2.4",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2",
+    "selectivizr": "~1.0.2",
+    "swfobject": "2.3-beta+rc1",
+    "bootstrap-touch-carousel": "~0.8.0",
+    "nouislider": "https://github.com/leongersen/noUiSlider.git"
+  },
+  "dependencies": {},
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    ".bower-cache",
+    ".bower-registry",
+    ".bower-tmp",
+    ".idea"
+  ]
+}
