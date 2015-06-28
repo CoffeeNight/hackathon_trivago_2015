@@ -337,12 +337,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jgerhold/patternlab-php-core.git",
-                "reference": "84c5d50f4e74754f3b6fc95aefdec56f45dd3b2c"
+                "reference": "6c5461108036979447bcc2413bccc760a777d363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jgerhold/patternlab-php-core/zipball/84c5d50f4e74754f3b6fc95aefdec56f45dd3b2c",
-                "reference": "84c5d50f4e74754f3b6fc95aefdec56f45dd3b2c",
+                "url": "https://api.github.com/repos/jgerhold/patternlab-php-core/zipball/6c5461108036979447bcc2413bccc760a777d363",
+                "reference": "6c5461108036979447bcc2413bccc760a777d363",
                 "shasum": ""
             },
             "require": {
@@ -393,7 +393,7 @@
                 "wiki": "http://patternlab.io/docs/",
                 "source": "https://github.com/pattern-lab/patternlab-php-core/releases"
             },
-            "time": "2015-06-19 10:07:29"
+            "time": "2015-06-27 14:53:57"
         },
         {
             "name": "pattern-lab/patternengine-twig",
