@@ -1,0 +1,63 @@
+{% include "molecules-header" %}
+<main class="wm-big-header__profile">
+<div class="container wm-search-wrapper-small">
+  <div class="row">
+    <!-- Left -->
+    <div class="col-md-3">
+      <div class="row section-wrapper">
+        <div class="col-md-12">
+          <img src="../../assets/images/malte-s.jpg" alt="..." class="img-thumbnail">
+        </div>
+      </div>
+      <div class="row section-wrapper">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="filters-title">Interests</div>
+              <ul class="interests-wrapper">
+                <li><img src="/assets/images/food.png" class="interest"></img></li>
+                <li><img src="/assets/images/film.png" class="interest"></img></li>
+                <li><img src="/assets/images/wine.png" class="interest"></img></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row section-wrapper">
+        <div class="col-md-12">
+          <img src="../../assets/images/star.png" class="rating"></img>
+          <img src="../../assets/images/star.png" class="rating"></img>
+          <img src="../../assets/images/star.png" class="rating"></img>
+        </div>
+      </div>
+      <div class="section-wrapper">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="searchbox-short-description">Long Name</div>
+          </div>
+          <div class="col-md-12">
+            <div class="searchbox-name"><strong>From: </strong>Düsseldorf, Deutschland</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="col-md-9">
+      <h3>Direct requests</h3>
+      <div class="row section-wrapper">
+        {% include "molecules-traveler_request" %}
+      </div>
+      <h3>Travelers going to Düsseldorf</h3>
+      <div class="row section-wrapper">
+        {% include "molecules-traveler_suggestion" %}
+      </div>
+      <div class="row section-wrapper">
+        {% include "molecules-traveler_suggestion" %}
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+{% include "molecules-footer" %}
