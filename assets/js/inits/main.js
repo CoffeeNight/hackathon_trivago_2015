@@ -23,6 +23,13 @@ $(function () {
     });
     $('#slider').Link('upper').to($('#slider-value-upper'));
     $('#slider').Link('lower').to($('#slider-value-lower'));
+    $('#datetimepicker1').datetimepicker({
+    	format: 'YYYY-MM-DD',
+    	widgetPositioning: {
+    	    horizontal: 'auto',
+	        vertical: 'bottom'
+    	}
+    });
     $('.home-seach-submit').click(function(e){
     	e.preventDefault();
     	$('.wm-big-header__image').animate({ height: 0 }, 800);
