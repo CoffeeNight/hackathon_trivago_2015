@@ -24,7 +24,10 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <button type="button" class="btn btn-primary btn-lg">Make an offer!</button>
+            {% if isPlanForm %}
+            {% else %}
+              <button type="button" class="btn btn-primary btn-lg">Make an offer!</button>
+            {% endif %}
           </div>
         </div>
     </div>
@@ -56,7 +59,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-9">
+          <div class="{% if isPlanForm %}col-md-12{% else %}col-md-9{% endif %}">
             <div class="searchbox-name">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
           </div>
         </div>

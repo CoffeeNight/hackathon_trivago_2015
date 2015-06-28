@@ -22,9 +22,12 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row request-list-action-button">
           <div class="col-md-12">
-            <button type="button" class="btn btn-primary btn-lg">Accept request</button>
+            {% if isPlanForm %}
+            {% else %}
+              <a href="{{ plinsert.link(link["pages-plan"]) }}" type="button" class="btn btn-primary btn-lg">Accept request</a>
+            {% endif %}
           </div>
         </div>
     </div>
@@ -39,7 +42,7 @@
             <div class="searchbox-name"><strong>From: </strong>San Cristóbal, Venezuela</div>
           </div>
         </div>
-        <div class="row">
+        <div class="row star-rating">
           <div class="col-md-3">
             <img src="../../assets/images/star.png" class="rating"></img>
             <img src="../../assets/images/star.png" class="rating"></img>
