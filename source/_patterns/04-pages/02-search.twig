@@ -1,24 +1,61 @@
 {% include "molecules-header" %}
   <div class="container">
-    <div class="row"> 
-        <div class="col-md-offset-2 col-md-5">
-        <input type="email" class="form-control input-lg" placeholder="Search destination" />
-      </div>
-      <div class="col-md-2">
-        <div class='input-group date' id='datetimepicker1'>
-          <input type='text' class="form-control input-lg" />
-          <span class="input-group-addon">
-              <span class="glyphicon glyphicon-calendar"></span>
-          </span>
-        </div>
-      </div>
-      <div class="col-md-1">
-        <button type="submit" class="btn btn-default btn-lg">Search</button>
-      </div>
+    <div class="row wm-search-small-wrapper"> 
+      {% include "molecules-searchbox" %}
     </div>
     <div class="row">
-        <div class="col-md-3">Filters</div>
-        <div class="col-md-9">Search results</div>
+        <div class="col-md-3">
+          <div class="filters-box">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="filters-title">Interests</div>
+                <ul class="interests-wrapper">
+                  <li><img src="/assets/images/food.png" class="interest"></img></li>
+                  <li><img src="/assets/images/film.png" class="interest"></img></li>
+                  <li><img src="/assets/images/wine.png" class="interest"></img></li>
+                  <li><img src="/assets/images/coffee.png" class="interest"></img></li>
+                  <li><img src="/assets/images/shop.png" class="interest"></img></li>
+                  <li><img src="/assets/images/car.png" class="interest"></img></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="filters-box">
+            <div class="row">
+              <div class="col-md-12 filters-title">Price</div>
+              <div class="slider-wrapper">
+                <div id="slider" class="col-md-10"></div>
+              </div>
+            </div>
+            <div class="row margin-top-10">
+              <div class="col-md-12 slider-values-wrapper">
+                <span>Max:</span><span id="slider-value-upper" class="slider-value">0</span><span>€/Hour</span>
+              </div>
+            </div>
+            <div class="row margin-top-10">
+              <div class="col-md-12 slider-values-wrapper">
+                <span>Min:</span><span id="slider-value-lower" class="slider-value">0</span><span>€/Hour</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="row">
+            {% include "molecules-searchresult" %}
+          </div>
+          <div class="row">
+            {% include "molecules-searchresult" %}
+          </div>
+          <div class="row">
+            {% include "molecules-searchresult" %}
+          </div>
+          <div class="row">
+            {% include "molecules-searchresult" %}
+          </div>
+          <div class="row">
+            {% include "molecules-searchresult" %}
+          </div>
+        </div>
     </div>
   </div>
 {% include "molecules-footer" %}
