@@ -1,0 +1,5 @@
+{% for guide in guides %}
+<div class="row">
+  {% include "molecules-searchresult" with {"person":guide}%}
+</div>
+{% endfor %}

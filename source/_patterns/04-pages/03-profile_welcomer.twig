@@ -1,3 +1,4 @@
+{% set guide = guides[0] %}
 {% include "molecules-header" %}
 <main class="wm-big-header__profile">
 <div class="container wm-search-wrapper-small">
@@ -6,7 +7,7 @@
     <div class="col-md-3">
       <div class="row section-wrapper">
         <div class="col-md-12">
-          <img src="../../assets/images/profile_dubai_Zahra_Al_hamdan.jpeg" alt="..." class="img-thumbnail">
+          <img src="../../assets/images/{{guide.image}}" alt="..." class="img-thumbnail">
         </div>
       </div>
       <div class="row section-wrapper">
@@ -25,17 +26,17 @@
       </div>
       <div class="row section-wrapper">
         <div class="col-md-12">
-          <img src="../../assets/images/star.png" class="rating"></img>
-          <img src="../../assets/images/star.png" class="rating"></img>
-          <img src="../../assets/images/star.png" class="rating"></img>
+          {% for i in 1..guide.stars %}
+            <img src="../../assets/images/star.png" class="rating"></img>
+          {% endfor %}
         </div>
       </div>
       <div class="row section-wrapper">
           <div class="col-md-12">
-            <div class="searchbox-short-description">Long Name</div>
+            <div class="searchbox-short-description">{{guide.name}}</div>
           </div>
           <div class="col-md-12">
-            <div class="searchbox-name"><strong>From: </strong>Düsseldorf, Deutschland</div>
+            <div class="searchbox-name"><strong>From: </strong>{{guide.placeOfResidence}}</div>
           </div>
       </div>
     </div>
@@ -46,7 +47,7 @@
       <div class="row section-wrapper">
         {% include "molecules-traveler_request" %}
       </div>
-      <h3>Travelers going to Düsseldorf</h3>
+      <h3>Travelers going to Dubai</h3>
       <div class="row section-wrapper">
         {% include "molecules-traveler_suggestion" %}
       </div>

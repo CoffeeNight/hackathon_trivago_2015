@@ -33,7 +33,7 @@ $(function () {
         connect: true,
         range: {
             'min': 1,
-            'max': 1000
+            'max': 200
         },
         step: 1
     });
