@@ -11,14 +11,20 @@
 				<div class="col-md-2">
 					<h4>Activity 1</h4>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-4">
+				<div class="form-group">
+					<label for="item1[start]">Start Time</label>
+					<input type="text" min="1" class="form-item__start form-control" id="item1fixedcost" name="item1[start]" placeholder="Start Time">
+				</div>		
+				</div>
+				<div class="col-md-3">
 					<div class="form-group">
 						<label for="item1[hour]">Amount of time <span class="required">*</span></label>
 						<input type="number" class="form-item__time  form-control" min="1" id="item1hours" name="item1[hour]" placeholder="Need time in hours">
 						<input class="form-item__timecost" type="hidden" name="itemhourscost2" value="">
 					</div>		
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-3">
 					<div class="form-group">
 						<label for="item1[fixedcost]">Additional fixed costs</label>
 						<input type="number" min="1" class="form-item__fixedcost form-control" id="item1fixedcost" name="item1[fixedcost]" placeholder="Fixed costs">
@@ -46,14 +52,20 @@
 				<div class="col-md-2">
 					<h4>Activity 2</h4>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-4">
+				<div class="form-group">
+					<label for="item2[start]">Start Time</label>
+					<input type="text" min="1" class="form-item__start form-control" id="item1fixedcost" name="item2[start]" placeholder="Start Time">
+				</div>		
+				</div>
+				<div class="col-md-3">
 					<div class="form-group">
 						<label for="item2[hour]">Amount of time <span class="required">*</span></label>
 						<input type="number" class="form-item__time  form-control" min="1" id="item2hours" name="item2[hour]" placeholder="Need time in hours">
 						<input class="form-item__timecost" type="hidden" name="itemhourscost2" value="">
 					</div>		
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-3">
 					<div class="form-group">
 						<label for="item2[fixedcost]">Additional fixed costs</label>
 						<input type="number" min="1" class="form-item__fixedcost form-control" id="item2fixedcost" name="item2[fixedcost]" placeholder="Fixed costs">
@@ -82,14 +94,20 @@
 				<div class="col-md-2">
 					<h4>Activity {{i}}</h4>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-4">
+				<div class="form-group">
+					<label for="item1[start]">Start Time</label>
+					<input type="text" min="1" class="form-item__start form-control" id="item1fixedcost" name="item1[start]" placeholder="Start Time">
+				</div>		
+				</div>
+				<div class="col-md-3">
 					<div class="form-group">
 						<label for="item{{i}}[hour]">Amount of time <span class="required">*</span></label>
 						<input type="number" class="form-item__time form-control" min="1" id="item{{i}}hours" name="item{{i}}[hour]" placeholder="Need time in hours">
 						<input class="form-item__timecost" type="hidden" name="itemhourscost{{i}}" value="">
 					</div>		
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-3">
 					<div class="form-group">
 						<label for="item{{i}}[fixedcost]">Additional fixed costs</label>
 						<input type="number" min="1" class="form-item__fixedcost form-control" id="item{{i}}fixedcost" name="item{{i}}[fixedcost]" placeholder="Fixed costs">
