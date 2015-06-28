@@ -25,11 +25,11 @@ $(function () {
     $('#slider').Link('lower').to($('#slider-value-lower'));
     $('.home-seach-submit').click(function(e){
     	e.preventDefault();
-    	$('.wm-big-header__image').animate({ height: 0 }, 1000);
-    	$('.js-results').animate({ opacity: 1 }, 700);
-    	$('.wm-search-wrapper').animate({ padding: 0 }, 700);
+    	$('.wm-big-header__image').animate({ height: 0 }, 800);
+    	$('.js-results').animate({ opacity: 1 }, 600);
+    	$('.wm-search-wrapper').animate({ padding: 0 }, 600);
     	$('.navbar').fadeIn();
-    	$('.logo__container').animate({ height: 0 }, 1000);
+    	$('.logo__container').animate({ height: 0 }, 800);
     	// autoScrollTo('.wm-search-small-wrapper',-75,function(){
     	// 	//$('.logo__container').hide();
     	// });
