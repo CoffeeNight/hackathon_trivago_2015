@@ -5,6 +5,13 @@ function autoScrollTo(sel,offset,fn) {
 }
 
 $(function () {
+    $('#datetimepicker1').datetimepicker({
+    	format: 'YYYY-MM-DD',
+    	widgetPositioning: {
+    	    horizontal: 'auto',
+	        vertical: 'bottom'
+    	}
+    });
     $("#slider").noUiSlider({
         start: [1, 200],
         connect: true,
