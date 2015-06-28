@@ -64,7 +64,8 @@ $(function () {
     })
 
 
-    $('.form-item__add__link').click(function(){
+    $('.form-item__add__link').click(function(e){
+        e.preventDefault();
     	var $formItem = $(this).closest('.form-row--hidden');
     	console.log($formItem);
     	$formItem.removeClass('form-row--hidden').next('.form-row--invisible').removeClass('form-row--invisible');
