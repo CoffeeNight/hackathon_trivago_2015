@@ -89,15 +89,40 @@ $(function () {
     // Requests
     query.find({
       success: function(results) {
-        alert("Successfully retrieved " + results.length + " scores.");
+        //alert("Successfully retrieved " + results.length + " scores.");
         // Do something with the returned Parse.Object values
-        // for (var i = 0; i < results.length; i++) {
-        //   var object = results[i];
-        //   alert(object.id + ' - ' + object.get('playerName'));
-        // }
+        var requestTemplate = $('#requestTemplate');
+        var requestBox = $('#requestsBox');
+
+        requestBox.html('');
+        for (var i = 0; i < results.length; i++) {
+          var object = results[i];
+          //alert(object.id + ' - ' + object.get('playerName'));
+          requestTemplate.find('#travelerDescription').text(object.get('message'));
+          var newHTML = requestTemplate.html();
+          requestBox.append(newHTML);
+          console.log(object.get('message'));
+        }
       },
       error: function(error) {
         alert("Error: " + error.code + " " + error.message);
       }
+    });
+    $('#notify').on('click', function(e){
+        e.preventDefault();
+        var query = new Parse.Query(Parse.Installation);
+        Parse.Push.send({
+         where: query,
+         data: {
+           alert: "When do we take to outer space"
+         }
+        }, {
+         success: function() {
+           console.log("Push was successful");
+         },
+         error: function(error) {
+           console.error(error);
+         }
+        });
     });
 });
