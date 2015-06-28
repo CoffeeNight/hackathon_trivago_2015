@@ -90,6 +90,11 @@ $color-blue: rgb(30, 82, 143);
   // background-size: cover;
   background-position: center top;
 }
+
+.wm-big-header__profile {
+  padding: 60px 0 0;
+}
+
 .input-large {
   width: 150px;
 }
@@ -154,10 +159,11 @@ $color-blue: rgb(30, 82, 143);
 .searchbox .searchbox-name {
   color: #8b8b8b;
   font-size: 13px;
+  margin-top: 8px;
 }
 .interests-wrapper {
   padding: 5px 0 0 0;
-  margin: 0;
+  margin: 4px 0 0 0;
   list-style: none;
 }
 .interests-wrapper .interest {
@@ -198,6 +204,20 @@ $color-blue: rgb(30, 82, 143);
   background: transparent;
   padding: 5rem;
 }
+
+.section-wrapper {
+  margin: 20px 0;
+}
+.section-title {
+  font-size: 20px;
+  font-size: 2rem;
+  color: #34495e;
+  margin: 0;
+  padding-bottom: 20px;
+}
+.place-request-btn {
+  width: 556px;
+}
 @media (min-width: 768px) {
   .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
     margin-left: -15px;
@@ -234,6 +254,9 @@ $color-blue: rgb(30, 82, 143);
 .row {
   &--first {
     margin-top: 75px;
+    h1 {
+      margin-top: 0;
+    }
   }
 }
 .form-item__add {
@@ -267,10 +290,22 @@ $color-blue: rgb(30, 82, 143);
 .form-result__total--hourly {
   margin-top: 25px;
 }
+.form-row__header {
+  margin-bottom: 25px;
+}
 .form__submit {
   text-align: right;
   margin-top: 25px;
   input {
     width: 100%;
   }
+}
+.required {
+  color: red;
+}
+.star-rating {
+  margin-top: 5px;
+}
+.request-list-action-button {
+  margin-top: 8px;
 }

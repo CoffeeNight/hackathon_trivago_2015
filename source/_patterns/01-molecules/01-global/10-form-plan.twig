@@ -1,4 +1,10 @@
 <form action="#" method="post" accept-charset="utf-8">
+	<div class="row form-row form-row__header">
+		<div class="col-md-10 col-md-offset-2">
+			<h2>The Activity Plan</h2>
+			<p><strong>Your hourly rate: 15,00 €</strong></p>
+		</div>
+	</div>
 	<div class="row form-row">
 		<div class="col-md-12">
 			<div class="row">
@@ -7,21 +13,22 @@
 				</div>
 				<div class="col-md-5">
 					<div class="form-group">
-						<label for="item1[hour]">Amount of time</label>
-						<input type="text" class="form-control" id="item1hours" name="item1[hour]" placeholder="Need time in hours">
+						<label for="item1[hour]">Amount of time <span class="required">*</span></label>
+						<input type="number" class="form-item__time  form-control" min="1" id="item1hours" name="item1[hour]" placeholder="Need time in hours">
+						<input class="form-item__timecost" type="hidden" name="itemhourscost2" value="">
 					</div>		
 				</div>
 				<div class="col-md-5">
 					<div class="form-group">
 						<label for="item1[fixedcost]">Additional fixed costs</label>
-						<input type="text" class="form-control" id="item1fixedcost" name="item1[fixedcost]" placeholder="Fixed costs">
+						<input type="number" min="1" class="form-item__fixedcost form-control" id="item1fixedcost" name="item1[fixedcost]" placeholder="Fixed costs">
 					</div>		
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-2">
 					<div class="form-group">
-						<label for="item1[desc]">Description of Activity (recommended)</label>
+						<label for="item1[desc]">Description of Activity <span class="required">*</span></label>
 						<textarea class="form-control" rows="5" id="item1desc" name="item1[desc]" placeholder="Description of Activity"></textarea>
 					</div>
 				</div>
@@ -41,21 +48,22 @@
 				</div>
 				<div class="col-md-5">
 					<div class="form-group">
-						<label for="item2[hour]">Amount of time</label>
-						<input type="text" class="form-control" id="item2hours" name="item2[hour]" placeholder="Need time in hours">
+						<label for="item2[hour]">Amount of time <span class="required">*</span></label>
+						<input type="number" class="form-item__time  form-control" min="1" id="item2hours" name="item2[hour]" placeholder="Need time in hours">
+						<input class="form-item__timecost" type="hidden" name="itemhourscost2" value="">
 					</div>		
 				</div>
 				<div class="col-md-5">
 					<div class="form-group">
 						<label for="item2[fixedcost]">Additional fixed costs</label>
-						<input type="text" class="form-control" id="item2fixedcost" name="item2[fixedcost]" placeholder="Fixed costs">
+						<input type="number" min="1" class="form-item__fixedcost form-control" id="item2fixedcost" name="item2[fixedcost]" placeholder="Fixed costs">
 					</div>		
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-2">
 					<div class="form-group">
-						<label for="item2[desc]">Description of Activity (recommended)</label>
+						<label for="item2[desc]">Description of Activity <span class="required">*</span></label>
 						<textarea class="form-control" rows="5" id="item2desc" name="item1[desc]" placeholder="Description of Activity"></textarea>
 					</div>
 				</div>
@@ -76,21 +84,22 @@
 				</div>
 				<div class="col-md-5">
 					<div class="form-group">
-						<label for="item{{i}}[hour]">Amount of time</label>
-						<input type="text" class="form-control" id="item{{i}}hours" name="item{{i}}[hour]" placeholder="Need time in hours">
+						<label for="item{{i}}[hour]">Amount of time <span class="required">*</span></label>
+						<input type="number" class="form-item__time form-control" min="1" id="item{{i}}hours" name="item{{i}}[hour]" placeholder="Need time in hours">
+						<input class="form-item__timecost" type="hidden" name="itemhourscost{{i}}" value="">
 					</div>		
 				</div>
 				<div class="col-md-5">
 					<div class="form-group">
 						<label for="item{{i}}[fixedcost]">Additional fixed costs</label>
-						<input type="text" class="form-control" id="item{{i}}fixedcost" name="item{{i}}[fixedcost]" placeholder="Fixed costs">
+						<input type="number" min="1" class="form-item__fixedcost form-control" id="item{{i}}fixedcost" name="item{{i}}[fixedcost]" placeholder="Fixed costs">
 					</div>		
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-2">
 					<div class="form-group">
-						<label for="item{{i}}[desc]">Description of Activity (recommended)</label>
+						<label for="item{{i}}[desc]">Description of Activity <span class="required">*</span></label>
 						<textarea class="form-control" rows="5" id="item{{i}}desc" name="item{{i}}[desc]" placeholder="Description of Activity"></textarea>
 					</div>
 				</div>
@@ -117,6 +126,15 @@
 		</div>
 		<div class="col-md-2">
 			<span class="form-result__amount">0,00 €</span>
+		</div>
+	</div>
+	<div class="row form-result__total form-result__total--total">
+		<div class="col-md-8 col-md-offset-2">
+			<span class="form-result__title">Total costs:</span>
+		</div>
+		<div class="col-md-2">
+			<span class="form-result__amount">0,00 €</span>
+
 		</div>
 	</div>
 
