@@ -80,4 +80,23 @@ $(function () {
     	$cost.val($that.val()*15);
     	calcCosts();
     });
+    var tourRequest = Parse.Object.extend("TourRequest");
+    var query = new Parse.Query(tourRequest);
+    $('#notify').on('click', function(e){
+        e.preventDefault();
+        var query = new Parse.Query(Parse.Installation);
+        Parse.Push.send({
+         where: query,
+         data: {
+           alert: "When do we take to outer space"
+         }
+        }, {
+         success: function() {
+           console.log("Push was successful");
+         },
+         error: function(error) {
+           console.error(error);
+         }
+        });
+    });
 });
