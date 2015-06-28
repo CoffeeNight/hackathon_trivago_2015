@@ -14,8 +14,8 @@
 // @import 'vendors/font-awesome';
 // @import 'vendors/animate';
 // @import 'vendors/owl.carousel';
-// @import 'vendors/jquery.nouislider';
-// @import 'vendors/jquery.nouislider.pips';
+@import 'vendors/jquery.nouislider';
+@import 'vendors/jquery.nouislider.pips';
 @import 'vendors/bootstrap-datetimepicker';
 
 // modules
@@ -93,6 +93,10 @@
 .footer {
   background-color: #222;
 }
+.rating {
+  width: 20px;
+  height: 20px;
+}
 
 .searchbox {
   margin: 5px 0;
@@ -106,23 +110,42 @@
   color: #8b8b8b;
   font-size: 13px;
 }
-.searchbox .searchbox-interests {
+.interests-wrapper {
   padding: 5px 0 0 0;
-}
-.searchbox .rating {
-  width: 20px;
-  height: 20px;
-}
-.searchbox .interest {
-  background-color: rgb(30, 82, 143);
-  width: 40px;
-}
-.searchbox .searchbox-interests ul {
-  padding: 0;
   margin: 0;
   list-style: none;
 }
-.searchbox .searchbox-interests ul li {
+.interests-wrapper .interest {
+  background-color: rgb(30, 82, 143);
+  width: 40px;
+  padding: 2px;
+}
+.interests-wrapper li {
   display: inline-block;
   margin-right: 5px;
+  margin-bottom: 5px;
+}
+.slider-wrapper .slider-value {
+  margin: 0px 0px 0px 5px;
+}
+.slider-wrapper .slider-values-wrapper {
+  font-size: 12px;
+  color: #888;
+  margin-top: 10px;
+}
+.slider-wrapper {
+  margin-left: 15px;
+}
+.filters-box {
+  margin: 20px 0;
+}
+.filters-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.margin-top-10 {
+  margin-top: 10px;
+}
+.margin-bottom-10 {
+  margin-bottom: 10px;
 }
