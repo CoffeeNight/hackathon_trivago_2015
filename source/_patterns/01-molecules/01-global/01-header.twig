@@ -7,9 +7,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="../../assets/images/logo_w.png" alt=""></a>
+      <a class="navbar-brand" href="{{ plinsert.link(link["pages-homepage"]) }}"><img src="../../assets/images/logo_w.png" alt=""></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li role="separator" class="divider"></li>
+        <li class="active"><a href="{{ plinsert.link(link["pages-search"]) }}"><i class="glyphicon glyphicon-search"></i> Search</a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-inbox"></i> Requests</a></li>
+      </ul>
+      <p class="navbar-text navbar-right"><a href="#" class="navbar-link">Mr. Guide</a></p>
     </div><!--/.navbar-collapse -->
   </div>
 </header>

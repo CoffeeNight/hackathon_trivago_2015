@@ -30,13 +30,17 @@ $(function () {
 	        vertical: 'bottom'
     	}
     });
-    $('.home-seach-submit').click(function(e){
+    $('.home-search-submit').click(function(e){
     	e.preventDefault();
-    	$('.wm-big-header__image').animate({ height: 0 }, 800);
-    	$('.js-results').animate({ opacity: 1 }, 600);
-    	$('.wm-search-wrapper').animate({ padding: 0 }, 600);
+    	$('.home-search-form').submit();
+    });
+    $('.home-search-form').submit(function(e){
+    	e.preventDefault();
+    	$('.wm-big-header__image').animate({ height: 0 }, 600);
+    	$('.js-results').animate({ opacity: 1 }, 400);
+    	$('.wm-search-wrapper').animate({ padding: 0 }, 400);
     	$('.navbar').fadeIn();
-    	$('.logo__container').animate({ height: 0 }, 800);
+    	$('.logo__container').animate({ height: 0 }, 600);
     	// autoScrollTo('.wm-search-small-wrapper',-75,function(){
     	// 	//$('.logo__container').hide();
     	// });
