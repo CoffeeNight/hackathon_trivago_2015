@@ -1,0 +1,131 @@
+<form action="#" method="post" accept-charset="utf-8">
+	<div class="row form-row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-2">
+					<h4>Activity 1</h4>
+				</div>
+				<div class="col-md-5">
+					<div class="form-group">
+						<label for="item1[hour]">Amount of time</label>
+						<input type="text" class="form-control" id="item1hours" name="item1[hour]" placeholder="Need time in hours">
+					</div>		
+				</div>
+				<div class="col-md-5">
+					<div class="form-group">
+						<label for="item1[fixedcost]">Additional fixed costs</label>
+						<input type="text" class="form-control" id="item1fixedcost" name="item1[fixedcost]" placeholder="Fixed costs">
+					</div>		
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-2">
+					<div class="form-group">
+						<label for="item1[desc]">Description of Activity (recommended)</label>
+						<textarea class="form-control" rows="5" id="item1desc" name="item1[desc]" placeholder="Description of Activity"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row form-row form-row--hidden">
+		<div class="col-md-8 col-md-offset-2 form-item__add">
+			<a href="#" class="form-item__add__link"><i class="glyphicon glyphicon-plus-sign"></i>Add another activity</a>
+		</div>
+		<div class="col-md-12 form-item">
+
+
+			<div class="row">
+				<div class="col-md-2">
+					<h4>Activity 2</h4>
+				</div>
+				<div class="col-md-5">
+					<div class="form-group">
+						<label for="item2[hour]">Amount of time</label>
+						<input type="text" class="form-control" id="item2hours" name="item2[hour]" placeholder="Need time in hours">
+					</div>		
+				</div>
+				<div class="col-md-5">
+					<div class="form-group">
+						<label for="item2[fixedcost]">Additional fixed costs</label>
+						<input type="text" class="form-control" id="item2fixedcost" name="item2[fixedcost]" placeholder="Fixed costs">
+					</div>		
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-2">
+					<div class="form-group">
+						<label for="item2[desc]">Description of Activity (recommended)</label>
+						<textarea class="form-control" rows="5" id="item2desc" name="item1[desc]" placeholder="Description of Activity"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% for i in 3..10 %}
+	<div class="row form-row form-row--hidden form-row--invisible">
+		<div class="col-md-8 col-md-offset-2 form-item__add">
+			<a href="#" class="form-item__add__link"><i class="glyphicon glyphicon-plus-sign"></i>Add another activity</a>
+		</div>
+		<div class="col-md-12 form-item">
+
+
+			<div class="row">
+				<div class="col-md-2">
+					<h4>Activity {{i}}</h4>
+				</div>
+				<div class="col-md-5">
+					<div class="form-group">
+						<label for="item{{i}}[hour]">Amount of time</label>
+						<input type="text" class="form-control" id="item{{i}}hours" name="item{{i}}[hour]" placeholder="Need time in hours">
+					</div>		
+				</div>
+				<div class="col-md-5">
+					<div class="form-group">
+						<label for="item{{i}}[fixedcost]">Additional fixed costs</label>
+						<input type="text" class="form-control" id="item{{i}}fixedcost" name="item{{i}}[fixedcost]" placeholder="Fixed costs">
+					</div>		
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-2">
+					<div class="form-group">
+						<label for="item{{i}}[desc]">Description of Activity (recommended)</label>
+						<textarea class="form-control" rows="5" id="item{{i}}desc" name="item{{i}}[desc]" placeholder="Description of Activity"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+	<div class="row form__map">
+		<div class="col-md-12">
+			
+		</div>
+	</div>
+	<div class="row form-result__total form-result__total--hourly">
+		<div class="col-md-8 col-md-offset-2">
+			<span class="form-result__title">Total hourly costs:</span>
+		</div>
+		<div class="col-md-2">
+			<span class="form-result__amount">0,00 €</span>
+		</div>
+	</div>
+	<div class="row form-result__total form-result__total--fixed">
+		<div class="col-md-8 col-md-offset-2">
+			<span class="form-result__title">Total fixed costs:</span>
+		</div>
+		<div class="col-md-2">
+			<span class="form-result__amount">0,00 €</span>
+		</div>
+	</div>
+
+	<div class="row form__submit">
+		<div class="col-md-3 col-md-offset-2">&nbsp;
+<!-- 			  <input type="submit" class="btn btn-danger" value="Reject">
+ -->		</div>
+		<div class="col-md-4 col-md-offset-3">
+			  <input type="submit" class="btn btn-success" value="Submit">
+		</div>
+	</div>
+</form>

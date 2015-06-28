@@ -144,7 +144,7 @@ $color-blue: rgb(30, 82, 143);
   margin-bottom: 1rem;  
 }
 .searchbox {
-  margin: 5px 0;
+  margin: 5px 0 25px;
   overflow: hidden; 
 }
 .searchbox .searchbox-short-description {
@@ -229,4 +229,48 @@ $color-blue: rgb(30, 82, 143);
 }
 .noUi-connect {
   background: $color-blue;
+}
+
+.row {
+  &--first {
+    margin-top: 75px;
+  }
+}
+.form-item__add {
+  display: none;
+}
+.form-row--hidden {
+  .form-item {
+    display: none;
+  }
+  .form-item__add {
+    display: block;
+  }
+}
+.form-row--invisible {
+  display: none;
+}
+.form-item__add { 
+  &__link i {
+    font-size: 24px;
+    display: block;
+    margin-top: -.2em;
+    float: left;
+    margin-right: .5em;
+  }
+}
+.form-result__total {
+  margin-top: 10px;
+  text-align: right;
+  font-weight: bold;
+}
+.form-result__total--hourly {
+  margin-top: 25px;
+}
+.form__submit {
+  text-align: right;
+  margin-top: 25px;
+  input {
+    width: 100%;
+  }
 }
