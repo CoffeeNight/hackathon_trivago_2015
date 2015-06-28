@@ -1,14 +1,16 @@
+<form action="#" class="home-search-form" method="post" accept-charset="utf-8">
 <div class="col-md-offset-2 col-md-3 margin-b-1">
-  <input type="email" class="form-control input-lg" placeholder="Search destination" />
+  <input type="text" class="form-control input-lg" placeholder="Search destination" value="{{search.city}}" />
 </div>
 <div class="col-md-3 margin-b-1">
   <div class='input-group date' id='datetimepicker1'>
-    <input type='text' class="form-control input-lg" />
+    <input type='text' class="form-control input-lg" value="{{search.date}}" placeholder="Date" />
     <span class="input-group-addon">
         <span class="glyphicon glyphicon-calendar"></span>
     </span>
   </div>
 </div>
 <div class="col-md-2 margin-b-1">
-  <button type="submit" class="home-seach-submit btn btn-default btn-lg">Search</button>
+  <input type="submit" class="home-search-submit btn btn-default btn-lg" value="Search">
 </div>
+</form>
