@@ -90,7 +90,7 @@ $(function () {
         Parse.Push.send({
          where: query,
          data: {
-           alert: "When do we take to outer space"
+           alert: "Hej Zahra, I saw your Photos & was especially intrigued by that crazy fish thing! Would be happy to meet you. Love, Lotta"
          }
         }, {
          success: function() {
