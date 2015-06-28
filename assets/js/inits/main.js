@@ -80,6 +80,8 @@ $(function () {
     	$cost.val($that.val()*15);
     	calcCosts();
     });
+
+    Parse.initialize("dS3rAMmDvIsvWkBWyS9txTRlSNYPpIFboZ8eRReK", "NG3s7U0uZOgtD6pwF2g52okwoGKTBhvnMzVSF2yz");
     var tourRequest = Parse.Object.extend("TourRequest");
     var query = new Parse.Query(tourRequest);
     $('#notify').on('click', function(e){
@@ -88,7 +90,7 @@ $(function () {
         Parse.Push.send({
          where: query,
          data: {
-           alert: "When do we take to outer space"
+           alert: "Hej Zahra, I saw your Photos & was especially intrigued by that crazy fish thing! Would be happy to meet you. Love, Lotta"
          }
         }, {
          success: function() {
