@@ -80,6 +80,8 @@ $(function () {
     	$cost.val($that.val()*15);
     	calcCosts();
     });
+
+    Parse.initialize("dS3rAMmDvIsvWkBWyS9txTRlSNYPpIFboZ8eRReK", "NG3s7U0uZOgtD6pwF2g52okwoGKTBhvnMzVSF2yz");
     var tourRequest = Parse.Object.extend("TourRequest");
     var query = new Parse.Query(tourRequest);
     $('#notify').on('click', function(e){
