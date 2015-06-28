@@ -83,7 +83,8 @@
 }
 
 .wm-search-wrapper {
-  padding: 189px 0 125px 0px;
+  // padding: 189px 0 125px 0px;
+  padding: 0 0 125px 0px;
 }
 
 .wm-search-small-wrapper {
@@ -96,6 +97,32 @@
 .rating {
   width: 20px;
   height: 20px;
+}
+
+.home-seach-submit {
+  width: 100%;
+}
+
+.logo__container {
+  background: rgba(255,255,255,.4);
+  margin: 25px 0;
+}
+
+.logo--home {
+    width: 100%;
+}
+
+.navbar-brand {
+  padding:0;
+  width: 162px;
+}
+.navbar-brand img {
+  width: 100%;
+}
+
+.navbar-inverse {
+  background-color: rgba(0,0,0,.3);
+  border: 0;
 }
 
 .searchbox {
@@ -148,4 +175,7 @@
 }
 .margin-bottom-10 {
   margin-bottom: 10px;
+.footer {
+  background: transparent;
+  padding: 5rem;
 }
